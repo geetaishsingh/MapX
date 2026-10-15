@@ -1,0 +1,424 @@
+/* =========================================
+   WORKSHEET EDITOR
+========================================= */
+
+.worksheet-editor {
+    width: 100%;
+    padding: 22px;
+    background-color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.editor-header {
+    margin-bottom: 25px;
+
+    .editor-heading-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    h1 {
+        margin: 0 0 8px 0;
+
+        font-size: 28px;
+        font-weight: 700;
+
+        color: #222;
+    }
+
+    p {
+        margin: 0;
+
+        font-size: 14px;
+        color: #777;
+    }
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.editor-card {
+    width: 100%;
+
+    padding: 22px;
+    margin-bottom: 20px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+
+    h2 {
+        margin: 0 0 20px 0;
+
+        font-size: 20px;
+        color: #222;
+    }
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 18px;
+
+    label {
+        display: block;
+
+        margin-bottom: 7px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        color: #333;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+
+        padding: 11px 12px;
+
+        border: 1px solid #d5d5d5;
+        border-radius: 6px;
+
+        outline: none;
+
+        font-size: 14px;
+
+        background-color: #fff;
+
+        transition: 0.2s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: #2474d2;
+
+        box-shadow: 0 0 0 2px rgba(36, 116, 210, 0.08);
+    }
+
+    textarea {
+        min-height: 90px;
+
+        resize: vertical;
+    }
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.form-row {
+    display: flex;
+
+    gap: 15px;
+
+    width: 100%;
+
+    .form-group {
+        flex: 1;
+    }
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+
+/* =========================================
+   QUESTION BOX
+========================================= */
+
+.question-box {
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    background-color: #f8f9fa;
+
+    border: 1px solid #e1e1e1;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   QUESTION HEADER
+========================================= */
+
+.question-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    h3 {
+        margin: 0;
+
+        font-size: 16px;
+
+        color: #333;
+    }
+}
+
+
+/* =========================================
+   DELETE BUTTONS
+========================================= */
+
+.delete-question,
+.delete-section {
+    border: none;
+
+    background: transparent;
+
+    color: #d33;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+.delete-question:hover,
+.delete-section:hover {
+    text-decoration: underline;
+
+    color: #b00000;
+}
+
+
+/* =========================================
+   ADD QUESTION
+========================================= */
+
+.add-question {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px dashed #2474d2;
+
+    border-radius: 6px;
+
+    background-color: #f5f9ff;
+
+    color: #2474d2;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.add-question:hover {
+    background-color: #eaf3ff;
+
+    border-color: #1d63b7;
+}
+
+
+/* =========================================
+   ADD SECTION
+========================================= */
+
+.add-section {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #2474d2;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.add-section:hover {
+    background-color: #1d63b7;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .worksheet-editor {
+        padding: 20px;
+    }
+
+    .editor-card {
+        padding: 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+
+        gap: 0;
+    }
+}
+
+
+.question-options-editor {
+    input + input {
+        margin-top: 8px;
+    }
+}
+
+
+.chapter-navigation {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+
+    button,
+    .add-chapter {
+        padding: 8px 12px;
+        border: 1px solid #2474d2;
+        border-radius: 6px;
+        background: #ffffff;
+        color: #2474d2;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    button:hover:not(:disabled),
+    .add-chapter:hover {
+        background: #f5f9ff;
+    }
+
+    button:disabled {
+        border-color: #d5d5d5;
+        color: #999999;
+        cursor: not-allowed;
+    }
+}
+
+
+.add-chapter {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #2474d2;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-chapter:hover {
+    background: #1d63b7;
+}
+
+
+/* =========================================
+   ROOMIER TYPE SCALE
+========================================= */
+
+.worksheet-editor {
+    padding: 25px;
+}
+
+.editor-header {
+    margin-bottom: 28px;
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+.editor-card {
+    padding: 24px;
+    margin-bottom: 22px;
+
+    h2 {
+        font-size: 21px;
+        margin-bottom: 22px;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    label {
+        margin-bottom: 8px;
+        font-size: 15px;
+    }
+
+    input,
+    textarea {
+        padding: 12px 13px;
+        font-size: 15px;
+    }
+}
+
+.question-box {
+    padding: 20px;
+    margin-bottom: 17px;
+}
+
+.question-header {
+    margin-bottom: 20px;
+
+    h3 {
+        font-size: 17px;
+    }
+}
+
+.add-question,
+.add-section {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 15px;
+}

@@ -1,0 +1,16 @@
+export const SLIDE_TYPES = {
+  TITLE: "title",
+  BEFORE_YOU_READ: "beforeYouRead",
+  INTRODUCTION: "introduction",
+  STORY: "story",
+  VOCABULARY: "vocabulary",
+  READING: "readingComprehension",
+  THINK: "thinkAndAnswer",
+  SPEAK: "speakAndShare",
+  GRAMMAR: "grammar",
+  ACTIVITY: "activity",
+  FUN_ZONE: "funZone",
+  LESSON: "lessonForLife",
+  MOTIVATION: "motivation",
+  THANK_YOU: "thankYou",
+};

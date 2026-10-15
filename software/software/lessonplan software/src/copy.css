@@ -1,0 +1,517 @@
+/* ===================================
+   LESSON PREVIEW
+=================================== */
+
+.lesson-preview {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin: auto;
+  padding: 42px 55px 55px;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  box-sizing: border-box;
+}
+
+
+/* ===================================
+   INNER BORDER
+=================================== */
+
+.inner-border {
+  position: absolute;
+  inset: 15px;
+  pointer-events: none;
+  border-left: 2px solid #d9a51d;
+  border-right: 2px solid #d9a51d;
+}
+
+
+/* ===================================
+   DECORATIVE CORNERS
+=================================== */
+
+.corner {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  z-index: 2;
+}
+
+.corner-tl {
+  top: 10px;
+  left: 10px;
+  border-top: 14px solid #204d88;
+  border-left: 14px solid #204d88;
+}
+
+.corner-tr {
+  top: 10px;
+  right: 10px;
+  border-top: 14px solid #204d88;
+  border-right: 14px solid #204d88;
+}
+
+.corner-bl {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 14px solid #15999b;
+  border-left: 14px solid #15999b;
+}
+
+.corner-br {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 14px solid #204d88;
+  border-right: 14px solid #204d88;
+}
+
+
+/* ===================================
+   HEADER
+=================================== */
+
+.lesson-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.lesson-header h1 {
+  margin: 0 0 8px;
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #102b62;
+}
+
+.lesson-header h2 {
+  text-align: left;
+  margin: 0 0 8px;
+  font-size: 27px;
+  font-weight: 800;
+  color: #c53067;
+  text-transform: uppercase;
+}
+
+.lesson-subtitle {
+  margin: 0;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  color: #3d4654;
+}
+
+.lesson-subtitle span {
+  margin: 0 12px;
+  color: #333;
+}
+
+
+/* ===================================
+   INFORMATION TABLE
+=================================== */
+
+.lesson-info-table {
+  display: grid;
+  grid-template-columns: 180px 1fr 180px 1fr;
+  margin-bottom: 20px;
+  border: 1px solid #d78aa5;
+}
+
+.lesson-info-table > div {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-right: 1px solid #d78aa5;
+  border-bottom: 1px solid #d78aa5;
+  font-size: 18px;
+}
+
+.lesson-info-table > div:nth-last-child(-n + 4) {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 244, 250, 0.9),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+
+.info-value {
+  background: #fff;
+}
+
+
+/* ===================================
+   MAIN SECTIONS
+=================================== */
+
+.preview-section {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+
+/* ===================================
+   RIBBON TITLE
+=================================== */
+
+.ribbon-title {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 42px;
+  padding: 0 28px 0 12px;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.ribbon-title::after {
+  content: "";
+  position: absolute;
+  right: -22px;
+  top: 0;
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+}
+
+.ribbon-title.purple {
+  background: linear-gradient(90deg, #57306f, #71418b);
+}
+
+.ribbon-title.purple::after {
+  border-left: 22px solid #71418b;
+}
+
+.ribbon-title.blue {
+  background: linear-gradient(90deg, #174c89, #2866a8);
+}
+
+.ribbon-title.blue::after {
+  border-left: 22px solid #2866a8;
+}
+
+
+/* ===================================
+   ROUND ICON
+=================================== */
+
+.section-icon {
+  width: 48px;
+  height: 48px;
+  margin-left: -25px;
+  margin-right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+  background: inherit;
+  border: 4px solid #ffffff;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ===================================
+   SECTION LINES
+=================================== */
+
+.section-line {
+  position: absolute;
+  left: 310px;
+  right: 0;
+  top: 20px;
+  height: 2px;
+}
+
+.section-line::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.purple-line {
+  background: #6b3d8f;
+}
+
+.purple-line::after {
+  background: #6b3d8f;
+}
+
+.blue-line {
+  background: #21508e;
+}
+
+.blue-line::after {
+  background: #21508e;
+}
+
+
+/* ===================================
+   OBJECTIVES
+=================================== */
+
+.objective-list {
+  margin: 14px 0 0;
+  padding-left: 28px;
+}
+
+.objective-list li {
+  margin-bottom: 9px;
+  padding-left: 5px;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+
+/* ===================================
+   CONTENT TABLE
+=================================== */
+
+.content-preview-table {
+  margin-top: 15px;
+  border: 1px solid #6381ad;
+}
+
+.content-preview-header {
+  display: grid;
+  grid-template-columns: 28% 72%;
+  background: linear-gradient(90deg, #1c4f8b, #245a9b);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.content-preview-header > div {
+  padding: 10px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.content-preview-row {
+  display: grid;
+  grid-template-columns: 28% 72%;
+  min-height: 52px;
+}
+
+.content-preview-row > div {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-right: 1px solid #7b95bb;
+  border-top: 1px solid #7b95bb;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.topic-cell {
+  font-weight: 700;
+}
+
+.row-0 .topic-cell {
+  background: linear-gradient(
+    90deg,
+    rgba(218, 226, 237, 0.9),
+    #ffffff
+  );
+}
+
+.row-1 .topic-cell {
+  background: linear-gradient(
+    90deg,
+    rgba(211, 238, 214, 0.9),
+    #ffffff
+  );
+}
+
+.row-2 .topic-cell {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 237, 169, 0.9),
+    #ffffff
+  );
+}
+
+
+/* ===================================
+   SIMPLE LOWER SECTIONS
+=================================== */
+
+.simple-section {
+  margin-top: 17px;
+}
+
+.simple-heading {
+  display: flex;
+  align-items: center;
+}
+
+.round-icon {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 13px;
+  color: white;
+  font-size: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.heading-content {
+  width: 100%;
+  padding-top: 2px;
+}
+
+.heading-content h3 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dotted-line {
+  position: relative;
+  width: 100%;
+  border-top: 2px dotted currentColor;
+}
+
+.dotted-line::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  right: -2px;
+  top: -5px;
+  background: currentColor;
+}
+
+.simple-section p {
+  margin: 5px 0 0 67px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+
+/* ===================================
+   GREEN
+=================================== */
+
+.green-section {
+  color: #2d7136;
+}
+
+.green-section .round-icon {
+  background: #237733;
+}
+
+
+/* ===================================
+   ORANGE
+=================================== */
+
+.orange-section {
+  color: #c9670c;
+}
+
+.orange-section .round-icon {
+  background: #ef7600;
+}
+
+
+/* ===================================
+   CYAN
+=================================== */
+
+.cyan-section {
+  color: #258b92;
+}
+
+.cyan-section .round-icon {
+  background: #24989e;
+}
+
+
+/* ===================================
+   PINK
+=================================== */
+
+.pink-section {
+  color: #cf2c68;
+}
+
+.pink-section .round-icon {
+  background: #db2366;
+}
+
+
+/* ===================================
+   VIOLET
+=================================== */
+
+.violet-section {
+  color: #654580;
+}
+
+.violet-section .round-icon {
+  background: #68418b;
+}
+
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 800px) {
+  .lesson-preview {
+    padding: 35px 25px 50px;
+  }
+
+  .lesson-header h1 {
+    font-size: 35px;
+  }
+
+  .lesson-header h2 {
+    font-size: 22px;
+  }
+
+  .lesson-subtitle {
+    font-size: 15px;
+  }
+
+  .lesson-info-table {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .lesson-info-table > div {
+    border-bottom: 1px solid #d78aa5 !important;
+  }
+
+  .content-preview-header,
+  .content-preview-row {
+    grid-template-columns: 35% 65%;
+  }
+
+  .section-line {
+    left: 300px;
+  }
+
+  .simple-section p {
+    margin-left: 0;
+  }
+}

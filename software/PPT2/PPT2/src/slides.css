@@ -1,0 +1,62 @@
+/* All slide styles (1280x720). Used by preview AND export. */
+.capture { position: fixed; left: -99999px; top: 0; width: 1280px; height: 720px; background: #fff; }
+.fit { width: 100%; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 18px #0002; }
+.sl { width: 1280px; height: 720px; display: flex; overflow: hidden; position: relative; background: #fff; font-family: "Poppins", system-ui, sans-serif; color: #1d2733; }
+
+/* ----- content slides: coloured title panel (left) + content (right) ----- */
+.sl.v4 .lp { width: 430px; flex: none; background: var(--main); color: #fff; padding: 48px 46px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; position: relative; overflow: hidden; }
+.sl.v4 .lp::after { content: ""; position: absolute; right: -120px; top: -120px; width: 300px; height: 300px; border-radius: 50%; background: #fff; opacity: .12; }
+.sl.v4 .lp > * { position: relative; z-index: 1; }
+.sl.v4 .num { width: 84px; height: 84px; border-radius: 50%; background: #fff; color: var(--main); display: grid; place-items: center; font-size: 46px; font-weight: 800; box-shadow: 0 6px 0 var(--dark); }
+.sl.v4 .tag { background: var(--dark); padding: 6px 20px; border-radius: 999px; font-size: 20px; font-weight: 600; }
+.sl.v4 .lp h2 { margin: 0; flex: 1; font-size: 50px; line-height: 1.12; font-weight: 800; color: #fff; }
+.sl.v4 .lg { height: 150px; width: auto; background: #fff; border-radius: 18px; padding: 8px 14px; }
+.sl.v4 .rp { flex: 1; min-width: 0; display: flex; flex-direction: column; background: #fff; }
+.sl.v4 .bd { flex: 1; min-height: 0; padding: 0 56px; display: flex; flex-direction: column; gap: 22px; justify-content: center; }
+.sl.v4 .ft { height: 64px; flex: none; padding: 0 56px; display: flex; align-items: center; gap: 8px; }
+.sl.v4 .ft i { width: 14px; height: 14px; border-radius: 7px; background: var(--main); opacity: .22; }
+.sl.v4 .ft i.on { width: 38px; opacity: 1; }
+
+/* ----- content blocks (one column, sized for the right panel) ----- */
+.sl .cards { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.sl .tile { display: flex; align-items: center; gap: 22px; background: var(--soft); border-radius: 22px; padding: 24px 30px; font-size: 30px; line-height: 1.3; box-shadow: 0 6px 0 rgba(0,0,0,.08); }
+.sl .tile b { flex: none; display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: var(--main); color: #fff; font-size: 30px; }
+.sl .tile p { margin: 0; }
+.sl .tile.word { background: var(--main); color: #fff; justify-content: center; font-size: 40px; font-weight: 700; padding: 34px 20px; box-shadow: 0 8px 0 var(--dark); }
+
+.sl .bubble { background: var(--soft); border: 4px solid var(--main); border-radius: 36px 36px 36px 6px; padding: 36px 40px; font-size: 38px; font-weight: 600; color: var(--dark); line-height: 1.3; }
+.sl .note { font-size: 28px; color: #556; margin: 0; }
+
+.sl .bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.sl .bars li { background: var(--soft); border-left: 14px solid var(--main); border-radius: 14px; padding: 22px 30px; font-size: 32px; font-weight: 500; }
+
+.sl .qa { display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
+.sl .box { background: var(--soft); border: 3px solid var(--main); border-radius: 22px; padding: 26px 32px; font-size: 36px; font-weight: 700; color: var(--dark); }
+.sl .box small { display: block; font-size: 18px; font-weight: 600; letter-spacing: .06em; color: var(--main); margin-bottom: 6px; }
+.sl .box.ans { background: var(--main); color: #fff; }
+.sl .box.ans small { color: #fffc; }
+.sl .arr { display: block; text-align: center; font-size: 40px; line-height: 44px; height: 44px; color: var(--main); transform: rotate(90deg); }
+.sl .box.dash { background: #fff; border-style: dashed; font-weight: 500; font-size: 30px; color: #445; min-height: 140px; }
+
+.sl .opts { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.sl .opt { display: flex; align-items: center; gap: 22px; background: var(--soft); border-radius: 22px; padding: 22px 28px; font-size: 34px; font-weight: 700; box-shadow: 0 6px 0 rgba(0,0,0,.08); }
+.sl .opt b { flex: none; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 16px; background: var(--main); color: #fff; font-size: 32px; }
+
+.sl .marks { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; font-size: 32px; }
+.sl .marks li { background: var(--soft); border-radius: 18px; padding: 22px 28px 22px 76px; position: relative; box-shadow: 0 6px 0 rgba(0,0,0,.08); }
+.sl .marks li::before { content: "★"; position: absolute; left: 26px; top: 50%; transform: translateY(-50%); color: var(--main); font-size: 32px; }
+
+/* ----- cover: white title side + coloured chapter-number side ----- */
+.sl.cv4 .cv-l { flex: 1.3; padding: 56px 70px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; background: #fff; }
+.sl.cv4 .cv-logo { height: 110px; width: auto; }
+.sl.cv4 .cv-tag { background: var(--soft); color: var(--main); border: 3px solid var(--main); font-weight: 700; font-size: 22px; padding: 6px 24px; border-radius: 999px; }
+.sl.cv4 h1 { margin: 0; font-size: 76px; line-height: 1.1; font-weight: 800; color: var(--dark); }
+.sl.cv4 p { margin: 0; font-size: 28px; line-height: 1.35; color: #445; border-left: 8px solid var(--main); padding-left: 20px; }
+.sl.cv4 .cv-r { flex: 1; background: var(--main); position: relative; overflow: hidden; }
+.sl.cv4 .cv-r i { position: absolute; inset: 0; margin: auto; border-radius: 50%; }
+.sl.cv4 .r1 { width: 600px; height: 600px; border: 3px solid rgba(255,255,255,.25); }
+.sl.cv4 .r2 { width: 440px; height: 440px; border: 3px solid rgba(255,255,255,.4); }
+.sl.cv4 .r3 { width: 300px; height: 300px; background: var(--dark); }
+.sl.cv4 .cv-no { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; }
+.sl.cv4 .cv-no b { font-size: 150px; line-height: 1; font-weight: 800; }
+.sl.cv4 .cv-no span { font-size: 28px; font-weight: 600; letter-spacing: .08em; }

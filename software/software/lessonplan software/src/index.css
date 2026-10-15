@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #ececec;
+  color: #262626;
+}
+
+.page-bg {
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN PAGE */
+
+.lesson-page {
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  padding: 55px 55px 45px;
+  position: relative;
+
+  border-top: 12px solid #244f8f;
+  border-bottom: 12px solid #244f8f;
+  border-left: 12px solid #244f8f;
+  border-right: 12px solid #244f8f;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* INNER BORDER */
+
+.lesson-page::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 2px solid #f0ad20;
+  pointer-events: none;
+}
+
+.lesson-page::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border-left: 2px solid #d32f67;
+  border-right: 2px solid #d32f67;
+  pointer-events: none;
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #142b5c;
+  margin-bottom: 18px;
+}
+
+.header h2 {
+  color: #c42d62;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.subtitle span {
+  margin: 0 8px;
+}
+
+/* INFO TABLE */
+
+.info-table {
+  position: relative;
+  z-index: 2;
+  border: 1px solid #d692a8;
+  margin-bottom: 28px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+
+.info-row:not(:last-child) {
+  border-bottom: 1px solid #d692a8;
+}
+
+.info-row > div {
+  padding: 14px 16px;
+  border-right: 1px solid #d692a8;
+}
+
+.info-row > div:last-child {
+  border-right: none;
+}
+
+.label {
+  font-weight: 800;
+  background: #f8edf1;
+}
+
+.info-row:nth-child(2) .label {
+  background: #edf2f8;
+}
+
+.value {
+  font-weight: 600;
+}
+
+/* SECTION */
+
+.section {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 26px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.section-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 27px;
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: 23px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  border-top: 2px dashed;
+  margin-top: 4px;
+}
+
+.section-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.section-content {
+  padding-left: 68px;
+}
+
+.section-content ul {
+  padding-left: 20px;
+}
+
+.section-content li {
+  margin-bottom: 8px;
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+.section-content p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* CONTENT TABLE */
+
+.content-table {
+  border: 1px solid #849ab9;
+  margin-left: 68px;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 28% 72%;
+}
+
+.table-header {
+  background: #21508e;
+  color: white;
+  font-weight: 800;
+}
+
+.table-header div {
+  padding: 13px 16px;
+}
+
+.table-row {
+  border-top: 1px solid #849ab9;
+}
+
+.table-row > div {
+  padding: 13px 16px;
+  border-right: 1px solid #849ab9;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.table-row > div:last-child {
+  border-right: none;
+}
+
+.topic {
+  font-weight: 800;
+}
+
+.row-blue .topic {
+  background: #edf2f8;
+}
+
+.row-green .topic {
+  background: #e6f2e7;
+}
+
+.row-yellow .topic {
+  background: #fff1b8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .page-bg {
+    padding: 10px;
+  }
+
+  .lesson-page {
+    padding: 35px 22px;
+    border-width: 7px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header h2 {
+    font-size: 21px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-title {
+    font-size: 18px;
+    white-space: normal;
+  }
+
+  .section-line,
+  .section-dot {
+    display: none;
+  }
+
+  .section-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+  }
+
+  .section-content {
+    padding-left: 0;
+  }
+
+  .content-table {
+    margin-left: 0;
+    overflow-x: auto;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 35% 65%;
+    min-width: 550px;
+  }
+
+  .section-content li,
+  .section-content p {
+    font-size: 14px;
+  }
+}

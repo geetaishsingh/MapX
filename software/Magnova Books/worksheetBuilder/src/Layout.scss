@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eeeeee;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.flex {
+
+    display: flex;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT
+========================================= */
+
+.left {
+
+    width: clamp(280px, 30vw, 380px);
+
+    flex: 0 0 clamp(280px, 30vw, 380px);
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    border-right: 1px solid #dddddd;
+
+    overflow-y: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   RIGHT
+========================================= */
+
+.right {
+
+    width: auto;
+
+    height: 100vh;
+
+    background: #eeeeee;
+
+    overflow-y: auto;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.left::-webkit-scrollbar,
+.right::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+.left::-webkit-scrollbar-thumb,
+.right::-webkit-scrollbar-thumb {
+
+    background: #bbbbbb;
+
+    border-radius: 10px;
+
+}
+
+
+.left::-webkit-scrollbar-track,
+.right::-webkit-scrollbar-track {
+
+    background: #f5f5f5;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .flex {
+
+        flex-direction: column;
+
+        height: auto;
+
+        overflow: visible;
+
+    }
+
+
+    .left,
+    .right {
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 100vh;
+
+        overflow: visible;
+
+    }
+
+}
